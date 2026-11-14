@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Природні Рекорди Планети</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['"Times New Roman"', 'Times', 'serif']
+          },
+          colors: {
+            forest: {
+              50: '#f2f8f4',
+              100: '#ddeee3',
+              200: '#bce0c9',
+              500: '#2d7a4d',
+              600: '#1e5631',
+              700: '#194628',
+              800: '#13351f',
+              900: '#0d2616'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .doc-text {
+      text-align: justify;
+    }
+    .aurora-canvas {
+      width: 100%;
+      height: 360px;
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-forest-600 flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform">
+          🌿
+        </div>
+        <div>
+          <span class="font-extrabold text-lg sm:text-xl tracking-tight text-forest-700 dark:text-emerald-400 block leading-none">
+            Природні Рекорди Планети
+          </span>
+          <span class="text-xs text-slate-500 dark:text-slate-400">
+            Інтерактивне дослідження природи
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+        <a href="#section-trees" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-forest-50 dark:hover:bg-slate-800 hover:text-forest-600 dark:hover:text-emerald-400 transition-colors">
+          1. Дивовижні дерева
+        </a>
+        <a href="#section-phenomena" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-forest-50 dark:hover:bg-slate-800 hover:text-forest-600 dark:hover:text-emerald-400 transition-colors">
+          2. Природні явища
+        </a>
+        <a href="#section-animals" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-forest-50 dark:hover:bg-slate-800 hover:text-forest-600 dark:hover:text-emerald-400 transition-colors">
+          3. Рекорди тварин
+        </a>
+        <a href="#section-calculator" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-forest-50 dark:hover:bg-slate-800 hover:text-forest-600 dark:hover:text-emerald-400 transition-colors">
+          4. Калькулятор дистанції
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" type="button" class="px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-sm font-medium flex items-center gap-2 transition-colors border border-slate-200 dark:border-slate-700">
+          <span id="theme-icon">🌙</span>
+          <span id="theme-label" class="hidden sm:inline">Темна тема</span>
+        </button>
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3 space-y-1">
+      <a href="#section-trees" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-forest-50 dark:hover:bg-slate-800">
+        1. Дивовижні дерева
+      </a>
+      <a href="#section-phenomena" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-forest-50 dark:hover:bg-slate-800">
+        2. Природні явища
+      </a>
+      <a href="#section-animals" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-forest-50 dark:hover:bg-slate-800">
+        3. Рекорди тварин
+      </a>
+      <a href="#section-calculator" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-forest-50 dark:hover:bg-slate-800">
+        4. Калькулятор дистанції
+      </a>
+    </div>
+  </header>
+
+  <section class="relative overflow-hidden bg-gradient-to-br from-forest-800 via-forest-700 to-emerald-900 text-white py-14 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-emerald-500/20 border border-emerald-400/30 text-emerald-200 mb-4">
+          Освітній веб-проєкт • Природознавство та аналіз даних
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+          Дивовижні факти природи та рекорди швидкості
+        </h1>
+        <p class="text-base sm:text-lg text-emerald-100/90 leading-relaxed mb-8">
+          Інтерактивна веб-сторінка, створена на основі текстового дослідження та аналітичної таблиці: від тисячолітніх дерев-гігантів і полярного сяйва до математичного порівняння найшвидших представників фауни.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#section-animals" class="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg transition-all">
+            Перейти до таблиці рекордів →
+          </a>
+          <a href="#section-trees" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 transition-all">
+            Читати розділи документа
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20 flex-grow w-full">
+
+    <section id="section-trees" class="scroll-mt-20">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b-2 border-forest-600 dark:border-emerald-500 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-forest-600 dark:text-emerald-400">Розділ 1</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+            1. Дивовижні дерева нашої планети
+          </h2>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="font-toggle-btn" type="button" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-forest-500 transition-colors shadow-sm">
+            Шрифт тексту: Сучасний (Inter)
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-6 bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-5">
+          <p class="doc-text text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+            Ліси займають близько третини суходолу Землі та відіграють ключову роль у виробленні кисню. Серед мільярдів дерев існують справжні природні гіганти, які живуть тисячоліттями. Найбільшим за об’ємом деревом у світі вважається секвоядендрон гігантський, відомий під назвою <strong>Генерал Шерман</strong>. Його висота перевищує 83 метри, а вік оцінюється приблизно у дві тисячі років. На рисунку 1 зображено гігантську секвою у природному середовищі.
+          </p>
+          <p class="doc-text text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+            Окрім висоти, дерева вражають своєю здатністю адаптуватися до складних кліматичних умов. Наприклад, баобаби в саванах Африки накопичують у своїх товстих стовбурах до ста тисяч літрів води, щоб пережити тривалі періоди посухи.
+          </p>
+
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 grid grid-cols-3 gap-3 text-center">
+            <div class="p-3 rounded-xl bg-forest-50 dark:bg-slate-800/70">
+              <div class="text-xl sm:text-2xl font-extrabold text-forest-600 dark:text-emerald-400">83,8 м</div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">Висота секвої</div>
+            </div>
+            <div class="p-3 rounded-xl bg-forest-50 dark:bg-slate-800/70">
+              <div class="text-xl sm:text-2xl font-extrabold text-forest-600 dark:text-emerald-400">~2000 р.</div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">Вік гіганта</div>
+            </div>
+            <div class="p-3 rounded-xl bg-forest-50 dark:bg-slate-800/70">
+              <div class="text-xl sm:text-2xl font-extrabold text-forest-600 dark:text-emerald-400">100 000 л</div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 mt-1">Вода в баобабі</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+            <div class="p-6 bg-gradient-to-b from-emerald-50 to-amber-50/40 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center h-64 relative">
+              <svg viewBox="0 0 220 220" class="w-48 h-48">
+                <circle cx="110" cy="110" r="95" fill="#1e5631" fill-opacity="0.08" />
+                <ellipse cx="110" cy="195" rx="75" ry="12" fill="#2d7a4d" fill-opacity="0.25" />
+                <rect x="38" y="135" width="26" height="60" rx="3" fill="#94a3b8" opacity="0.55" />
+                <text x="51" y="130" text-anchor="middle" font-size="9" fill="#64748b" font-weight="bold">Будинок 27м</text>
+                <path d="M96 195 L102 65 L118 65 L124 195 Z" fill="#854d0e" />
+                <polygon points="110,18 68,85 152,85" fill="#15803d" />
+                <polygon points="110,42 62,115 158,115" fill="#166534" />
+                <polygon points="110,72 56,145 164,145" fill="#14532d" />
+                <line x1="175" y1="20" x2="175" y2="195" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3" />
+                <text x="192" y="110" text-anchor="middle" font-size="11" fill="#d97706" font-weight="bold">83+ м</text>
+              </svg>
+            </div>
+            <div class="p-5 flex-grow flex flex-col justify-between text-center">
+              <div>
+                <p class="text-sm font-bold text-slate-800 dark:text-slate-100 mb-1">
+                  Рисунок 1 — Гігантська секвоя в національному парку
+                </p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">
+                  Секвоядендрон «Генерал Шерман» у порівнянні з 9-поверховим будинком
+                </p>
+              </div>
+              <button type="button" onclick="toggleTreeDetails('sequoia-details')" class="w-full py-2.5 px-4 rounded-xl bg-forest-50 dark:bg-slate-800 hover:bg-forest-100 dark:hover:bg-slate-700 text-forest-700 dark:text-emerald-400 text-xs font-bold transition-colors">
+                Детальніше про параметри ▾
+              </button>
+              <div id="sequoia-details" class="hidden mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 text-left text-xs space-y-1.5 text-slate-600 dark:text-slate-300">
+                <div>• <strong>Об’єм стовбура:</strong> 1 487 м³</div>
+                <div>• <strong>Діаметр біля основи:</strong> 11,1 метра</div>
+                <div>• <strong>Розташування:</strong> Національний парк «Секвоя», Каліфорнія</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+            <div class="p-6 bg-gradient-to-b from-amber-50 to-orange-50/40 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center h-64 relative">
+              <svg viewBox="0 0 220 220" class="w-48 h-48">
+                <circle cx="110" cy="110" r="95" fill="#d97706" fill-opacity="0.08" />
+                <ellipse cx="110" cy="195" rx="75" ry="12" fill="#b45309" fill-opacity="0.25" />
+                <path d="M72 195 Q65 135 82 95 L138 95 Q155 135 148 195 Z" fill="#9a3412" />
+                <path id="baobab-water-fill" d="M78 190 Q73 145 86 115 L134 115 Q147 145 142 190 Z" fill="#38bdf8" fill-opacity="0.65" />
+                <path d="M88 95 L60 65 M100 95 L90 55 M120 95 L130 55 M132 95 L160 65" stroke="#7c2d12" stroke-width="6" stroke-linecap="round" />
+                <circle cx="58" cy="58" r="18" fill="#16a34a" />
+                <circle cx="90" cy="48" r="22" fill="#15803d" />
+                <circle cx="130" cy="48" r="22" fill="#16a34a" />
+                <circle cx="162" cy="58" r="18" fill="#15803d" />
+                <text x="110" y="160" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">H₂O Резервуар</text>
+              </svg>
+            </div>
+            <div class="p-5 flex-grow flex flex-col justify-between text-center">
+              <div>
+                <p class="text-sm font-bold text-slate-800 dark:text-slate-100 mb-1">
+                  Африканський баобаб у савані
+                </p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">
+                  Природний накопичувач вологи під час тривалої посухи
+                </p>
+              </div>
+              <button type="button" onclick="toggleTreeDetails('baobab-details')" class="w-full py-2.5 px-4 rounded-xl bg-amber-50 dark:bg-slate-800 hover:bg-amber-100 dark:hover:bg-slate-700 text-amber-800 dark:text-amber-400 text-xs font-bold transition-colors">
+                Детальніше про адаптацію ▾
+              </button>
+              <div id="baobab-details" class="hidden mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 text-left text-xs space-y-1.5 text-slate-600 dark:text-slate-300">
+                <div>• <strong>Запас води:</strong> до 100 000 літрів</div>
+                <div>• <strong>Охват стовбура:</strong> може сягати понад 25 метрів</div>
+                <div>• <strong>Особливість:</strong> скидає листя у сухий сезон для зменшення випаровування</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-phenomena" class="scroll-mt-20">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b-2 border-forest-600 dark:border-emerald-500 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-forest-600 dark:text-emerald-400">Розділ 2</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+            2. Незвичайні природні явища
+          </h2>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <button type="button" onclick="setPhenomenonMode('green')" id="btn-mode-green" class="phenom-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-sm transition-all">
+            Зелене сяйво
+          </button>
+          <button type="button" onclick="setPhenomenonMode('purple')" id="btn-mode-purple" class="phenom-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition-all">
+            Фіолетове сяйво
+          </button>
+          <button type="button" onclick="setPhenomenonMode('rainbow')" id="btn-mode-rainbow" class="phenom-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition-all">
+            Подвійна веселка
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+          <div class="relative">
+            <canvas id="phenomena-canvas" class="aurora-canvas"></canvas>
+            <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-slate-900/75 backdrop-blur-sm text-white text-xs font-semibold flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span id="canvas-mode-indicator">Інтерактивна симуляція: Зелене полярне сяйво</span>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-900/90 border-t border-slate-200 dark:border-slate-800 text-center">
+            <p id="figure-2-caption" class="text-sm font-bold text-slate-800 dark:text-slate-100">
+              Рисунок 2 — Полярне сяйво над північним горизонтом
+            </p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Перемикайте кнопки вище, щоб дослідити зелене сяйво, фіолетове сяйво або подвійну веселку
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-5">
+          <p class="doc-text text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+            Природа постійно дивує людину красивими атмосферними та оптичними явищами. Одним із найвідоміших феноменів є <strong>полярне сяйво</strong>, яке виникає у верхніх шарах атмосфери внаслідок взаємодії сонячного вітру з магнітним полем Землі. Зазвичай воно має зелене або фіолетове забарвлення. На рисунку 2 показано полярне сяйво в нічному небі.
+          </p>
+          <p class="doc-text text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+            Іншим цікавим явищем є <strong>подвійна веселка</strong>, яка з’являється після дощу, коли сонячне світло двічі відбивається всередині крапель води. У другій дузі кольори завжди розташовані у зворотному порядку порівняно з основною веселкою.
+          </p>
+          <div class="p-4 rounded-xl bg-emerald-50/70 dark:bg-slate-800/80 border border-emerald-200/60 dark:border-slate-700">
+            <label for="wave-speed" class="block text-xs font-bold uppercase tracking-wider text-forest-700 dark:text-emerald-400 mb-2">
+              Швидкість руху атмосферних хвиль на графіці: <span id="speed-val-label">1.0x</span>
+            </label>
+            <input id="wave-speed" type="range" min="0.2" max="3" step="0.2" value="1" class="w-full accent-forest-600 cursor-pointer">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-animals" class="scroll-mt-20">
+      <div class="pb-4 border-b-2 border-forest-600 dark:border-emerald-500 mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-forest-600 dark:text-emerald-400">Розділ 3 • Аналітична база даних</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+          3. Рекорди тваринного світу
+        </h2>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm mb-8">
+        <p class="doc-text text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+          Тваринний світ Землі надзвичайно різноманітний, і кожен вид має власні еволюційні переваги для виживання. Однією з головних характеристик для хижаків та їхньої здобичі є швидкість пересування. У таблиці 1 наведено приклади найшвидших тварин у різних середовищах існування. Завдяки таким природним рекордам підтримується баланс в екосистемах, де кожен організм займає своє важливе місце.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 sm:p-8 mb-8">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
+          <div>
+            <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
+              Таблиця 1 — Рекорди швидкості у тваринному світі
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Натискайте на заголовки стовпців для сортування або фільтруйте за класом тварин
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="inline-flex rounded-xl bg-slate-100 dark:bg-slate-800 p-1 border border-slate-200 dark:border-slate-700">
+              <button type="button" data-filter="all" class="class-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-forest-600 text-white transition-all">
+                Усі класи (7)
+              </button>
+              <button type="button" data-filter="Птах" class="class-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-white/60 dark:hover:bg-slate-700 transition-all">
+                Птах
+              </button>
+              <button type="button" data-filter="Ссавець" class="class-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-white/60 dark:hover:bg-slate-700 transition-all">
+                Ссавець
+              </button>
+              <button type="button" data-filter="Риба" class="class-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-white/60 dark:hover:bg-slate-700 transition-all">
+                Риба
+              </button>
+            </div>
+
+            <div class="relative">
+              <input id="animal-search" type="text" placeholder="Пошук тварини..." class="px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-forest-500 w-44 sm:w-52">
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-forest-600 text-white font-bold select-none">
+                <th data-sort="name" class="sortable-th py-3.5 px-4 border-r border-forest-700 cursor-pointer hover:bg-forest-700 transition-colors">
+                  <div class="flex items-center justify-between gap-1">
+                    <span>Тварина</span>
+                    <span class="sort-indicator text-xs opacity-75">↕</span>
+                  </div>
+                </th>
+                <th data-sort="animalClass" class="sortable-th py-3.5 px-4 border-r border-forest-700 text-center cursor-pointer hover:bg-forest-700 transition-colors">
+                  <div class="flex items-center justify-center gap-1">
+                    <span>Клас</span>
+                    <span class="sort-indicator text-xs opacity-75">↕</span>
+                  </div>
+                </th>
+                <th data-sort="speed" class="sortable-th py-3.5 px-4 border-r border-forest-700 text-right cursor-pointer hover:bg-forest-700 transition-colors">
+                  <div class="flex items-center justify-end gap-1">
+                    <span>Швидкість (км/год)</span>
+                    <span class="sort-indicator text-xs">↓</span>
+                  </div>
+                </th>
+                <th data-sort="weight" class="sortable-th py-3.5 px-4 border-r border-forest-700 text-right cursor-pointer hover:bg-forest-700 transition-colors">
+                  <div class="flex items-center justify-end gap-1">
+                    <span>Середня вага (кг)</span>
+                    <span class="sort-indicator text-xs opacity-75">↕</span>
+                  </div>
+                </th>
+                <th data-sort="distancePerMin" class="sortable-th py-3.5 px-4 border-r border-forest-700 text-right cursor-pointer hover:bg-forest-700 transition-colors">
+                  <div class="flex items-center justify-end gap-1">
+                    <span>Дистанція за 1 хв (метри)</span>
+                    <span class="sort-indicator text-xs opacity-75">↕</span>
+                  </div>
+                </th>
+                <th data-sort="ratio" class="sortable-th py-3.5 px-4 border-r border-forest-700 text-right cursor-pointer hover:bg-forest-700 transition-colors">
+                  <div class="flex items-center justify-end gap-1">
+                    <span>Відношення швидкості до ваги</span>
+                    <span class="sort-indicator text-xs opacity-75">↕</span>
+                  </div>
+                </th>
+                <th data-sort="status" class="sortable-th py-3.5 px-4 text-center cursor-pointer hover:bg-forest-700 transition-colors">
+                  <div class="flex items-center justify-center gap-1">
+                    <span>Статус швидкості</span>
+                    <span class="sort-indicator text-xs opacity-75">↕</span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="animals-tbody" class="divide-y divide-slate-200 dark:divide-slate-700">
+            </tbody>
+            <tfoot id="animals-tfoot" class="bg-emerald-50/70 dark:bg-slate-800/90 font-bold text-slate-900 dark:text-slate-100 border-t-2 border-slate-300 dark:border-slate-600 divide-y divide-slate-200 dark:divide-slate-700">
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+          <div>
+            <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
+              Порівняння швидкості тварин (км/год)
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Інтерактивна стовпчаста діаграма за даними таблиці (наведіть курсор на стовпчик для деталей)
+            </p>
+          </div>
+          <div class="flex items-center gap-4 text-xs font-semibold">
+            <span class="flex items-center gap-1.5">
+              <span class="w-3 h-3 rounded-sm bg-forest-600 inline-block"></span> Рекордсмен (≥ 100 км/год)
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="w-3 h-3 rounded-sm bg-emerald-500 inline-block"></span> Швидка (&lt; 100 км/год)
+            </span>
+          </div>
+        </div>
+
+        <div id="chart-bars-Area" class="h-72 sm:h-80 pt-8 pb-4 px-2 sm:px-6 border border-slate-100 dark:border-slate-800 rounded-xl bg-slate-50/50 dark:bg-slate-950/40 flex items-end justify-around gap-3 sm:gap-6 relative">
+        </div>
+      </div>
+    </section>
+
+    <section id="section-calculator" class="scroll-mt-20">
+      <div class="pb-4 border-b-2 border-forest-600 dark:border-emerald-500 mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-forest-600 dark:text-emerald-400">Розділ 4 • Інтерактивний тренажер</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+          4. Калькулятор дистанції руху тварин
+        </h2>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 sm:p-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8 pb-8 border-b border-slate-100 dark:border-slate-800">
+          <div class="lg:col-span-7 space-y-4">
+            <label for="sim-minutes" class="block text-base font-bold text-slate-800 dark:text-slate-100">
+              Оберіть тривалість руху на максимальній швидкості:
+              <span id="sim-minutes-badge" class="ml-2 px-3 py-1 rounded-lg bg-forest-600 text-white text-sm font-extrabold">1 хвилина</span>
+            </label>
+            <input id="sim-minutes" type="range" min="1" max="60" value="1" class="w-full accent-forest-600 h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg cursor-pointer">
+            <div class="flex flex-wrap gap-2 pt-1">
+              <button type="button" onclick="setSimMinutes(1)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 hover:bg-forest-600 hover:text-white transition-colors">
+                1 хв (Табличне значення)
+              </button>
+              <button type="button" onclick="setSimMinutes(5)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 hover:bg-forest-600 hover:text-white transition-colors">
+                5 хв
+              </button>
+              <button type="button" onclick="setSimMinutes(15)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 hover:bg-forest-600 hover:text-white transition-colors">
+                15 хв
+              </button>
+              <button type="button" onclick="setSimMinutes(30)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 hover:bg-forest-600 hover:text-white transition-colors">
+                30 хв
+              </button>
+              <button type="button" onclick="setSimMinutes(60)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 hover:bg-forest-600 hover:text-white transition-colors">
+                60 хв (1 година)
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 bg-forest-50 dark:bg-slate-800/80 p-5 rounded-2xl border border-forest-100 dark:border-slate-700">
+            <div class="text-xs font-bold uppercase tracking-wider text-forest-700 dark:text-emerald-400 mb-1">
+              Формула розрахунку з таблиці
+            </div>
+            <div class="font-mono text-sm font-bold text-slate-900 dark:text-white bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-700 mb-2">
+              Дистанція (м) = (Швидкість × 1000 / 60) × Час (хв)
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              Переміщуйте повзунок, щоб перевірити, яку відстань у метрах і кілометрах подолає кожна тварина за обраний проміжок часу.
+            </p>
+          </div>
+        </div>
+
+        <div id="simulator-bars" class="space-y-4">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-300 border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800">
+        <div class="md:col-span-7 space-y-3">
+          <h3 class="text-white font-extrabold text-lg">
+            Короткі висновки дослідження
+          </h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Природні рекорди демонструють досконалість еволюційних механізмів адаптації: від накопичення ста тисяч літрів води баобабами до стрімкого пікірування сапсана зі швидкістю 380 км/год. Математичний аналіз таблиці підтверджує, що найвище відношення швидкості до маси тіла (253,33) належить саме птахам, тоді як середня швидкість досліджуваної групи становить 131 км/год.
+          </p>
+        </div>
+        <div class="md:col-span-5 space-y-3">
+          <h3 class="text-white font-extrabold text-lg">
+            Джерела інформації
+          </h3>
+          <ul class="text-sm space-y-2 text-emerald-400">
+            <li>
+              <a href="https://www.nps.gov/seki/learn/nature/sherman.htm" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                1. Служба національних парків США — Секвоя Генерал Шерман (nps.gov)
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nationalgeographic.com/animals" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                2. National Geographic — Рекорди швидкості у тваринному світі
+              </a>
+            </li>
+            <li>
+              <a href="https://www.britannica.com/science/aurora-atmospheric-phenomenon" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                3. Encyclopædia Britannica — Природа полярного сяйва та оптичних явищ
+              </a>
+            </li>
+            <li>
+              <a href="https://www.worldwildlife.org/" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                4. Всесвітній фонд дикої природи (WWF) — Збереження екосистем
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+        <span>© 2026 Освітній проєкт «Природні Рекорди Планети». Усі дані відповідають роботам №1 та №2.</span>
+        <a href="#" class="text-emerald-400 hover:underline font-semibold">Повернутися нагору ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const animalsData = [
+      { id: 1, name: 'Сапсан', animalClass: 'Птах', speed: 380, weight: 1.5, habitat: 'Повітря', feature: 'Найшвидший птах під час стрімкого пікірування' },
+      { id: 2, name: 'Гепард', animalClass: 'Ссавець', speed: 110, weight: 50.0, habitat: 'Суходіл', feature: 'Розганяється з місця до 100 км/год за 3 секунди' },
+      { id: 3, name: 'Риба-вітрильник', animalClass: 'Риба', speed: 109, weight: 90.0, habitat: 'Вода', feature: 'Має високий спинний плавець, схожий на вітрило' },
+      { id: 4, name: 'Вилоріг', animalClass: 'Ссавець', speed: 98, weight: 45.0, habitat: 'Суходіл', feature: 'Надзвичайно витривалий бігун прерій Північної Америки' },
+      { id: 5, name: 'Лев', animalClass: 'Ссавець', speed: 80, weight: 170.0, habitat: 'Суходіл', feature: 'Потужний хижак савани у коротких ривках' },
+      { id: 6, name: 'Страус', animalClass: 'Птах', speed: 70, weight: 110.0, habitat: 'Суходіл', feature: 'Найшвидший двоногий бігун серед усіх птахів' },
+      { id: 7, name: 'Кенгуру', animalClass: 'Ссавець', speed: 70, weight: 40.0, habitat: 'Суходіл', feature: 'Пересувається потужними еластичними стрибками' }
+    ].map(item => ({
+      ...item,
+      distancePerMin: (item.speed * 1000) / 60,
+      ratio: item.speed / item.weight,
+      status: item.speed >= 100 ? 'Рекордсмен' : 'Швидка'
+    }));
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+    let sortKey = 'speed';
+    let sortAsc = false;
+    let simMinutes = 1;
+    let isTimesFont = false;
+
+    function formatUaNumber(value, decimals) {
+      const fixed = value.toFixed(decimals);
+      const parts = fixed.split('.');
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+      return parts.join(',');
+    }
+
+    function getSpeedGradientStyle(speed) {
+      const minS = 70;
+      const maxS = 380;
+      const ratio = Math.max(0, Math.min(1, (speed - minS) / (maxS - minS)));
+      const alpha = (0.18 + ratio * 0.62).toFixed(2);
+      return `background-color: rgba(45, 164, 102, ${alpha});`;
+    }
+
+    function getFilteredAndSortedData() {
+      return animalsData
+        .filter(item => {
+          const matchesClass = currentFilter === 'all' || item.animalClass === currentFilter;
+          const matchesSearch = item.name.toLowerCase().includes(currentSearch.toLowerCase().trim());
+          return matchesClass && matchesSearch;
+        })
+        .sort((a, b) => {
+          let valA = a[sortKey];
+          let valB = b[sortKey];
+          if (typeof valA === 'string') {
+            return sortAsc ? valA.localeCompare(valB, 'uk') : valB.localeCompare(valA, 'uk');
+          }
+          return sortAsc ? valA - valB : valB - valA;
+        });
+    }
+
+    function renderTableAndChart() {
+      const rows = getFilteredAndSortedData();
+      const tbody = document.getElementById('animals-tbody');
+      const tfoot = document.getElementById('animals-tfoot');
+      const chartArea = document.getElementById('chart-bars-Area');
+
+      if (rows.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7" class="py-8 text-center text-slate-500 dark:text-slate-400">
+              За вашим запитом тварин не знайдено. Спробуйте змінити фільтр.
+            </td>
+          </tr>
+        `;
+        tfoot.innerHTML = '';
+        chartArea.innerHTML = `<div class="w-full h-full flex items-center justify-center text-slate-400 text-sm">Немає даних для відображення діаграми</div>`;
+        return;
+      }
+
+      tbody.innerHTML = rows.map((item, idx) => {
+        const isRecord = item.status === 'Рекордсмен';
+        const badgeClasses = isRecord
+          ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700'
+          : 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200 border border-amber-300 dark:border-amber-700';
+
+        const rowBg = idx % 2 === 0
+          ? 'bg-white dark:bg-slate-900'
+          : 'bg-emerald-50/30 dark:bg-slate-800/40';
+
+        return `
+          <tr class="${rowBg} hover:bg-emerald-50/80 dark:hover:bg-slate-800 transition-colors">
+            <td class="py-3 px-4 font-bold text-slate-900 dark:text-white border-r border-slate-200 dark:border-slate-700">
+              <div>${item.name}</div>
+              <div class="text-xs font-normal text-slate-500 dark:text-slate-400">${item.feature}</div>
+            </td>
+            <td class="py-3 px-4 text-center text-slate-700 dark:text-slate-300 border-r border-slate-200 dark:border-slate-700">
+              ${item.animalClass}
+            </td>
+            <td style="${getSpeedGradientStyle(item.speed)}" class="py-3 px-4 text-right font-extrabold text-slate-950 dark:text-white border-r border-slate-200 dark:border-slate-700">
+              ${item.speed}
+            </td>
+            <td class="py-3 px-4 text-right text-slate-700 dark:text-slate-300 border-r border-slate-200 dark:border-slate-700">
+              ${formatUaNumber(item.weight, 1)}
+            </td>
+            <td class="py-3 px-4 text-right font-medium text-slate-800 dark:text-slate-200 border-r border-slate-200 dark:border-slate-700">
+              ${formatUaNumber(item.distancePerMin, 1)}
+            </td>
+            <td class="py-3 px-4 text-right text-slate-700 dark:text-slate-300 border-r border-slate-200 dark:border-slate-700">
+              ${formatUaNumber(item.ratio, 2)}
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold ${badgeClasses}">
+                ${item.status}
+              </span>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      const speeds = rows.map(r => r.speed);
+      const weights = rows.map(r => r.weight);
+      const distances = rows.map(r => r.distancePerMin);
+
+      const avgSpeed = speeds.reduce((a, b) => a + b, 0) / rows.length;
+      const avgWeight = weights.reduce((a, b) => a + b, 0) / rows.length;
+      const avgDist = distances.reduce((a, b) => a + b, 0) / rows.length;
+
+      const minSpeed = Math.min(...speeds);
+      const minWeight = Math.min(...weights);
+
+      const maxSpeed = Math.max(...speeds);
+      const maxWeight = Math.max(...weights);
+
+      tfoot.innerHTML = `
+        <tr>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700">Середнє</td>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700"></td>
+          <td class="py-2.5 px-4 text-right border-r border-slate-300 dark:border-slate-700">${formatUaNumber(avgSpeed, 0)}</td>
+          <td class="py-2.5 px-4 text-right border-r border-slate-300 dark:border-slate-700">${formatUaNumber(avgWeight, 1)}</td>
+          <td class="py-2.5 px-4 text-right border-r border-slate-300 dark:border-slate-700">${formatUaNumber(avgDist, 1)}</td>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700"></td>
+          <td class="py-2.5 px-4"></td>
+        </tr>
+        <tr>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700">Мінімум</td>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700"></td>
+          <td class="py-2.5 px-4 text-right border-r border-slate-300 dark:border-slate-700">${minSpeed}</td>
+          <td class="py-2.5 px-4 text-right border-r border-slate-300 dark:border-slate-700">${formatUaNumber(minWeight, 1)}</td>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700"></td>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700"></td>
+          <td class="py-2.5 px-4"></td>
+        </tr>
+        <tr>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700">Максимум</td>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700"></td>
+          <td class="py-2.5 px-4 text-right border-r border-slate-300 dark:border-slate-700">${maxSpeed}</td>
+          <td class="py-2.5 px-4 text-right border-r border-slate-300 dark:border-slate-700">${formatUaNumber(maxWeight, 1)}</td>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700"></td>
+          <td class="py-2.5 px-4 border-r border-slate-300 dark:border-slate-700"></td>
+          <td class="py-2.5 px-4"></td>
+        </tr>
+      `;
+
+      const chartMax = 400;
+      chartArea.innerHTML = rows.map(item => {
+        const heightPct = Math.max(8, Math.round((item.speed / chartMax) * 100));
+        const barColor = item.speed >= 100 ? 'bg-forest-600 hover:bg-forest-500' : 'bg-emerald-500 hover:bg-emerald-400';
+        return `
+          <div class="flex-1 flex flex-col items-center h-full justify-end group relative max-w-[90px]">
+            <div class="mb-1.5 text-xs font-extrabold text-slate-700 dark:text-slate-200">
+              ${item.speed}
+            </div>
+            <div style="height: ${heightPct}%;" class="w-full rounded-t-xl ${barColor} transition-all duration-500 shadow-sm relative cursor-pointer">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none absolute -top-16 left-1/2 -translate-x-1/2 z-20 bg-slate-900 text-white text-[11px] py-1.5 px-2.5 rounded-lg shadow-lg whitespace-nowrap">
+                <div class="font-bold">${item.name} (${item.animalClass})</div>
+                <div>${item.speed} км/год • ${formatUaNumber(item.distancePerMin, 1)} м/хв</div>
+              </div>
+            </div>
+            <div class="mt-2.5 text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-300 text-center truncate w-full" title="${item.name}">
+              ${item.name}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderSimulator() {
+      const container = document.getElementById('simulator-bars');
+      const maxPossibleDist = (380 * 1000 / 60) * simMinutes;
+
+      container.innerHTML = animalsData.map(item => {
+        const distMeters = item.distancePerMin * simMinutes;
+        const distKm = distMeters / 1000;
+        const widthPct = Math.max(6, (distMeters / maxPossibleDist) * 100);
+
+        return `
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <div class="flex items-center gap-2">
+                <span class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">${item.name}</span>
+                <span class="text-xs px-2 py-0.5 rounded-md bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium">${item.animalClass} • ${item.speed} км/год</span>
+              </div>
+              <div class="text-right">
+                <span class="font-extrabold text-sm sm:text-base text-forest-700 dark:text-emerald-400">
+                  ${formatUaNumber(distMeters, 1)} м
+                </span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 ml-1">
+                  (${formatUaNumber(distKm, 2)} км)
+                </span>
+              </div>
+            </div>
+            <div class="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+              <div style="width: ${widthPct}%;" class="h-full bg-gradient-to-r from-forest-600 to-emerald-400 rounded-full transition-all duration-300"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function setSimMinutes(val) {
+      simMinutes = Number(val);
+      document.getElementById('sim-minutes').value = simMinutes;
+      let suffix = 'хвилин';
+      if (simMinutes === 1 || (simMinutes > 20 && simMinutes % 10 === 1)) suffix = 'хвилина';
+      else if ([2, 3, 4].includes(simMinutes % 10) && (simMinutes < 10 || simMinutes > 20)) suffix = 'хвилини';
+      document.getElementById('sim-minutes-badge').textContent = `${simMinutes} ${suffix}`;
+      renderSimulator();
+    }
+
+    function toggleTreeDetails(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+
+    let phenomenonMode = 'green';
+    let waveSpeedMultiplier = 1.0;
+    let animPhase = 0;
+
+    function setPhenomenonMode(mode) {
+      phenomenonMode = mode;
+      const buttons = {
+        green: document.getElementById('btn-mode-green'),
+        purple: document.getElementById('btn-mode-purple'),
+        rainbow: document.getElementById('btn-mode-rainbow')
+      };
+      Object.keys(buttons).forEach(k => {
+        if (k === mode) {
+          buttons[k].className = 'phenom-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-sm transition-all';
+        } else {
+          buttons[k].className = 'phenom-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition-all';
+        }
+      });
+
+      const indicator = document.getElementById('canvas-mode-indicator');
+      const caption = document.getElementById('figure-2-caption');
+      if (mode === 'green') {
+        indicator.textContent = 'Інтерактивна симуляція: Зелене полярне сяйво';
+        caption.textContent = 'Рисунок 2 — Полярне сяйво над північним горизонтом (зелений спектр)';
+      } else if (mode === 'purple') {
+        indicator.textContent = 'Інтерактивна симуляція: Фіолетове полярне сяйво';
+        caption.textContent = 'Рисунок 2 — Полярне сяйво над північним горизонтом (фіолетовий спектр)';
+      } else {
+        indicator.textContent = 'Інтерактивна симуляція: Подвійна веселка після дощу';
+        caption.textContent = 'Рисунок 2 — Оптичне явище подвійної веселки зі зворотним порядком кольорів';
+      }
+    }
+
+    function initPhenomenaCanvas() {
+      const canvas = document.getElementById('phenomena-canvas');
+      const ctx = canvas.getContext('2d');
+
+      const stars = Array.from({ length: 70 }, () => ({
+        x: Math.random(),
+        y: Math.random() * 0.75,
+        r: Math.random() * 1.6 + 0.5,
+        twinkle: Math.random() * Math.PI * 2
+      }));
+
+      function resizeCanvas() {
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width || 700;
+        canvas.height = 360;
+      }
+
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      function drawFrame() {
+        const w = canvas.width;
+        const h = canvas.height;
+        animPhase += 0.018 * waveSpeedMultiplier;
+
+        if (phenomenonMode === 'rainbow') {
+          const skyGrad = ctx.createLinearGradient(0, 0, 0, h);
+          skyGrad.addColorStop(0, '#1e3a5f');
+          skyGrad.addColorStop(0.65, '#4b7bec');
+          skyGrad.addColorStop(1, '#93c5fd');
+          ctx.fillStyle = skyGrad;
+          ctx.fillRect(0, 0, w, h);
+
+          const cx = w * 0.5;
+          const cy = h * 0.95;
+          const baseR = Math.min(w * 0.44, h * 0.72);
+          const primaryColors = ['#ef4444', '#f97316', '#eab308', '#22c55e', '#3b82f6', '#6366f1', '#a855f7'];
+          const secondaryColors = [...primaryColors].reverse();
+
+          ctx.save();
+          primaryColors.forEach((col, i) => {
+            ctx.beginPath();
+            ctx.arc(cx, cy, baseR - i * 4.5, Math.PI, 0, false);
+            ctx.strokeStyle = col;
+            ctx.lineWidth = 4.5;
+            ctx.globalAlpha = 0.78;
+            ctx.stroke();
+          });
+
+          const outerR = baseR + 48;
+          secondaryColors.forEach((col, i) => {
+            ctx.beginPath();
+            ctx.arc(cx, cy, outerR - i * 4, Math.PI, 0, false);
+            ctx.strokeStyle = col;
+            ctx.lineWidth = 4;
+            ctx.globalAlpha = 0.42;
+            ctx.stroke();
+          });
+          ctx.restore();
+        } else {
+          const nightGrad = ctx.createLinearGradient(0, 0, 0, h);
+          nightGrad.addColorStop(0, '#040814');
+          nightGrad.addColorStop(0.7, '#0b192c');
+          nightGrad.addColorStop(1, '#112a38');
+          ctx.fillStyle = nightGrad;
+          ctx.fillRect(0, 0, w, h);
+
+          stars.forEach(s => {
+            const alpha = 0.35 + 0.65 * Math.abs(Math.sin(animPhase * 1.5 + s.twinkle));
+            ctx.fillStyle = `rgba(255, 255, 255, ${alpha.toFixed(2)})`;
+            ctx.beginPath();
+            ctx.arc(s.x * w, s.y * h, s.r, 0, Math.PI * 2);
+            ctx.fill();
+          });
+
+          for (let band = 0; band < 3; band++) {
+            ctx.save();
+            ctx.beginPath();
+            const baseY = h * (0.28 + band * 0.12);
+            ctx.moveTo(0, h);
+            for (let x = 0; x <= w; x += 12) {
+              const waveY = baseY
+                + Math.sin(x * 0.012 + animPhase + band * 1.3) * 28
+                + Math.cos(x * 0.006 - animPhase * 0.8) * 18;
+              ctx.lineTo(x, waveY);
+            }
+            ctx.lineTo(w, h);
+            ctx.closePath();
+
+            const auroraGrad = ctx.createLinearGradient(0, baseY - 50, 0, h * 0.85);
+            if (phenomenonMode === 'green') {
+              auroraGrad.addColorStop(0, 'rgba(16, 185, 129, 0)');
+              auroraGrad.addColorStop(0.35, `rgba(52, 211, 153, ${0.42 - band * 0.08})`);
+              auroraGrad.addColorStop(0.7, `rgba(16, 185, 129, ${0.15 - band * 0.03})`);
+              auroraGrad.addColorStop(1, 'rgba(6, 78, 59, 0)');
+            } else {
+              auroraGrad.addColorStop(0, 'rgba(192, 132, 252, 0)');
+              auroraGrad.addColorStop(0.35, `rgba(216, 180, 254, ${0.42 - band * 0.08})`);
+              auroraGrad.addColorStop(0.7, `rgba(147, 51, 234, ${0.22 - band * 0.04})`);
+              auroraGrad.addColorStop(1, 'rgba(88, 28, 135, 0)');
+            }
+            ctx.fillStyle = auroraGrad;
+            ctx.fill();
+            ctx.restore();
+          }
+        }
+
+        ctx.fillStyle = '#07111a';
+        ctx.beginPath();
+        ctx.moveTo(0, h);
+        ctx.lineTo(0, h * 0.82);
+        ctx.lineTo(w * 0.18, h * 0.68);
+        ctx.lineTo(w * 0.35, h * 0.83);
+        ctx.lineTo(w * 0.55, h * 0.64);
+        ctx.lineTo(w * 0.76, h * 0.8);
+        ctx.lineTo(w * 0.9, h * 0.71);
+        ctx.lineTo(w, h * 0.82);
+        ctx.lineTo(w, h);
+        ctx.closePath();
+        ctx.fill();
+
+        requestAnimationFrame(drawFrame);
+      }
+
+      drawFrame();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderTableAndChart();
+      renderSimulator();
+      initPhenomenaCanvas();
+
+      document.querySelectorAll('.class-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentFilter = btn.getAttribute('data-filter');
+          document.querySelectorAll('.class-filter-btn').forEach(b => {
+            b.className = 'class-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-white/60 dark:hover:bg-slate-700 transition-all';
+          });
+          btn.className = 'class-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-forest-600 text-white transition-all';
+          renderTableAndChart();
+        });
+      });
+
+      document.getElementById('animal-search').addEventListener('input', e => {
+        currentSearch = e.target.value;
+        renderTableAndChart();
+      });
+
+      document.querySelectorAll('.sortable-th').forEach(th => {
+        th.addEventListener('click', () => {
+          const key = th.getAttribute('data-sort');
+          if (sortKey === key) {
+            sortAsc = !sortAsc;
+          } else {
+            sortKey = key;
+            sortAsc = key === 'name' || key === 'animalClass';
+          }
+          document.querySelectorAll('.sort-indicator').forEach(ind => {
+            ind.textContent = '↕';
+            ind.classList.add('opacity-75');
+          });
+          const activeInd = th.querySelector('.sort-indicator');
+          activeInd.textContent = sortAsc ? '↑' : '↓';
+          activeInd.classList.remove('opacity-75');
+          renderTableAndChart();
+        });
+      });
+
+      document.getElementById('sim-minutes').addEventListener('input', e => {
+        setSimMinutes(e.target.value);
+      });
+
+      document.getElementById('wave-speed').addEventListener('input', e => {
+        waveSpeedMultiplier = parseFloat(e.target.value);
+        document.getElementById('speed-val-label').textContent = `${waveSpeedMultiplier.toFixed(1)}x`;
+      });
+
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        const htmlEl = document.documentElement;
+        const isDark = htmlEl.classList.toggle('dark');
+        document.getElementById('theme-icon').textContent = isDark ? '☀️' : '🌙';
+        document.getElementById('theme-label').textContent = isDark ? 'Світла тема' : 'Темна тема';
+      });
+
+      document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('mobile-menu').classList.add('hidden');
+        });
+      });
+
+      document.getElementById('font-toggle-btn').addEventListener('click', e => {
+        isTimesFont = !isTimesFont;
+        document.querySelectorAll('.doc-text').forEach(p => {
+          if (isTimesFont) {
+            p.classList.add('font-serif');
+          } else {
+            p.classList.remove('font-serif');
+          }
+        });
+        e.target.textContent = isTimesFont
+          ? 'Шрифт тексту: Times New Roman (як у Документі)'
+          : 'Шрифт тексту: Сучасний (Inter)';
+      });
+    });
+  </script>
+</body>
+</html>
